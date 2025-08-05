@@ -9,7 +9,7 @@
             "version": "lts"
         }
     },
-    "postCreateCommand": "sudo apt-get update && sudo apt-get install -y libunwind-dev build-essential curl",
+    "postCreateCommand": "bash .devcontainer/install.sh",
     "customizations": {
         "vscode": {
             "extensions": [
