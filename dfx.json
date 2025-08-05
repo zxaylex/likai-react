@@ -43,5 +43,11 @@
     },
     "replica": {
         "subnet_type": "application"
+    },
+    "defaults": {
+        "build": {
+            "args": "",
+            "packtool": "mops sources"
+        }
     }
 }
