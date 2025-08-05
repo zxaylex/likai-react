@@ -1,0 +1,22 @@
+{
+    "name": "Ubuntu Latest with Rust and NVM",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "features": {
+        "ghcr.io/devcontainers/features/rust:1": {
+            "version": "latest"
+        },
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "lts"
+        }
+    },
+    "postCreateCommand": "sudo apt-get update && sudo apt-get install -y libunwind-dev build-essential curl",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "rust-lang.rust-analyzer",
+                "ms-vscode.vscode-node-azure-pack"
+            ]
+        }
+    },
+    "remoteUser": "vscode"
+}
