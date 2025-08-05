@@ -1,0 +1,10 @@
+[package]
+name = "api_canister"
+version = "0.1.0"
+edition = "2024"
+
+crate-type = ["cdylib"]
+
+[dependencies]
+ic-cdk = "0.18.5"
+

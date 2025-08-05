@@ -1,0 +1,47 @@
+{
+    "version": 1.0,
+    "canisters": {
+        "api_canister": {
+            "type": "rust",
+            "package": "api_canister",
+            "candid": "canisters/api_canister/api_canister.did"
+        },
+        "auth_canister": {
+            "type": "rust",
+            "package": "auth_canister",
+            "candid": "canisters/auth_canister/auth_canister.did"
+        },
+        "transaction_canister": {
+            "type": "rust",
+            "package": "transaction_canister",
+            "candid": "canisters/transaction_canister/transaction_canister.did"
+        },
+        "ai_canister": {
+            "type": "rust",
+            "package": "ai_canister",
+            "candid": "canisters/ai_canister/ai_canister.did"
+        },
+        "storage_canister": {
+            "type": "rust",
+            "package": "storage_canister",
+            "candid": "canisters/storage_canister/storage_canister.did"
+        }
+    },
+    "networks": {
+        "local": {
+            "bind": "127.0.0.1:8000",
+            "type": "ephemeral"
+        },
+        "ic": {
+            "providers": ["https://mainnet.dfinity.network"],
+            "type": "persistent"
+        },
+        "playground": {
+            "providers": ["https://playground.dfinity.network"],
+            "type": "playground"
+        }
+    },
+    "replica": {
+        "subnet_type": "application"
+    }
+}
