@@ -37,22 +37,9 @@ source "$HOME/.local/share/dfx/env" # dfx is often installed to ~/bin by the scr
 echo "IC CDK (dfx) installed."
 dfx --version
 
-# 4. Install Rust lang
-echo "Installing Rust programming language..."
-# Using rustup, the recommended way to install Rust
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-
-# Source cargo environment variables to make Rust tools available in the current session
-# This line might need to be added to ~/.bashrc or similar for persistence in future sessions,
-# but for a postCreateCommand, sourcing it directly makes it available.
-export PATH="$HOME/.cargo/bin:$PATH"
-
-echo "Rust installed."
-rustc --version
-cargo --version
-
-rustup target add wasm32-unknown-unknown
-echo "Wasm32 target added for Rust."
+# 4. install the Motoko compiler
+echo "Installing Motoko compiler..."
+npm i -g mops
 
 
 # 5. Install npm packages
